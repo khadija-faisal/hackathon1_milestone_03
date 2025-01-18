@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main-container">
+      <div id="container">
+        <div id="form-section">
+          <h1>Resume Builder</h1>
+          <form id="form">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              class="input-place"
+              placeholder="Enter your name"
+              required
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="input-place"
+              placeholder="Enter your email"
+              required
+            />
+            <label for="name">Number:</label>
+            <input
+              type="number"
+              class="input-place"
+              placeholder="Enter your number"
+              required
+            />
+            <label for="name">About:</label>
+            <textarea
+              type="text"
+              class="textarea-place"
+              placeholder="describe about yourself"
+              required
+            ></textarea>
+            <div class="experience-portion">
+              <div class="section">
+                <label for="experience">Position/Company:</label>
+                <input
+                  type="text"
+                  class="input-place"
+                  placeholder="Enter your Position or company name"
+                  required
+                />
+                <div class="section2">
+                  <label for="experience">Start:</label>
+                  <input type="date" class="input-place" required />
+                  <label for="experience">End:</label>
+                  <input type="date" class="input-place" required />
+                </div>
+                <label for="experience">About Your Experience:</label>
+                <textarea
+                  class="textarea-place"
+                  placeholder="describe about your Experience"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button class="Addmore" data-section="experience">Addmore</button>
+            <div class="education-portion">
+              <div class="section">
+                <label for="education">Education:</label>
+                <input
+                  type="text"
+                  class="input-place"
+                  placeholder="Enter your Education"
+                  required
+                />
+                <div class="section2">
+                  <label for="date">Start:</label>
+                  <input type="date" class="input-place" required />
+                  <label for="date">End:</label>
+                  <input type="date" class="input-place" required />
+                </div>
+              </div>
+            </div>
+            <button class="Addmore" data-section="education">Addmore</button>
+            <div class="project-portion">
+              <div class="section">
+                <label for="project">Projects:</label>
+                <input
+                  type="text"
+                  class="input-place"
+                  placeholder="Enter your project link"
+                  required
+                />
+                <label for="Project">About your Project:</label>
+                <textarea
+                  class="textarea-place"
+                  placeholder=" describe your project"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button class="Addmore" data-section="projects">Addmore</button>
+            <label for="skills">Skills:</label>
+            <input class="input-place" placeholder="Add your skills" required />
+            <label for="language">Languages:</label>
+            <input
+              class="input-place"
+              placeholder="Add your Langurage"
+              required
+            />
+          </form>
+        </div>
+
+        <div class="preview-live" id="preview-live" style="display: none; ">
+          <div id="preview-container">
+            <div id="personal">
+              <h2 class="preview-input"></h2>
+              <div class="section3">
+                <span class="preview-input"> </span>|
+                <span class="preview-input"></span>
+              </div>
+            </div>
+            <div class="line"></div>
+            <h3>About:</h3>
+            <p class="preview-textarea"></p>
+
+            <div class="line"></div>
+            <h3>Work History</h3>
+            <div class="highlight">
+              <li class="preview-input"></li>
+              <div class="section3 list2">
+                <div class="preview-input"></div>
+                |
+                <div class="preview-input"></div>
+              </div>
+            </div>
+            <p class="preview-textarea"></p>
+            <div class="dynamic-expereience-preview">
+
+            </div>
+            <div class="line"></div>
+            <h3>Education</h3>
+            <div class="highlight">
+              <li class="preview-input list"></li>
+              <div class="section3">
+                <div class="preview-input"></div>
+                |
+                <div class="preview-input"></div>
+              </div>
+            </div>
+              <div class="dynamic-eduaction-preview">
+
+              </div>
+            <div class="line"></div>
+            <h3>Projects</h3>
+            <li class="preview-input"></li>
+            <p id="list" class="preview-textarea">
+            </p>
+            <div class="dynamic-projects-preview">
+
+            </div>
+            <div class="line"></div>
+            <h3>Skills</h3>
+            <li class="preview-input list"></li>
+            <div class="line"></div>
+            <h3>Language</h3>
+            <li class="preview-input"></li>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttoncontainer">
+        <button id="generate" class="buttons">Generate</button>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
